@@ -1,19 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Odin-Recipes</title>
-</head>
-<body>
-  <header>
-    <h1>Odin Recipes</h1>
-    <nav>
-      <a href="recipes/chilli-con-carne.html">chilli con carne recipe</a>
-    </nav>
-  </header>
-  <main></main>
-  <footer></footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- #region google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- #endregion google-font -->
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Odin-Recipes</title>
+  </head>
+  <body>
+    <div class="video-container">
+      <video autoplay loop muted playsinline class="smoke-video">
+        <source src="assets/video/smoke.mp4" type="video/mp4" />
+      </video>
+      <div class="content">
+        <header>
+          <h1>Odin Recipes</h1>
+          <img class="header-icon" src="assets/icons/cooking-2.png" alt="" />
+        </header>
+        <main class="container">
+          <section class="main-content">
+            <div class="introductory-recipe">
+              <div class="intro-head">
+                <h2>Chili con Carne:</h2>
+                <span>Mein Seelenwärmer</span>
+              </div>
+
+              <p class="intro-text">
+                Dieses Chili ist mein absoluter Favorit, wenn es draußen
+                ungemütlich wird. Was ich daran liebe? Die perfekte Balance aus
+                feuriger Schärfe und der tiefen, rauchigen Note von Kreuzkümmel
+                und Paprika. Es ist eines dieser Gerichte, die mit jedem
+                Aufwärmen eigentlich nur noch besser werden!
+              </p>
+              <a href="recipes/chilli-con-carne.html"
+                >Chilli Con Carne
+                <img
+                  class="ingredient-icon"
+                  src="assets/icons/chili-peppers.png"
+                  alt=""
+              /></a>
+            </div>
+
+            <div class="introductory-recipe">
+              <div class="intro-head">
+                <h2>Hähnchen-Curry</h2>
+                <span>Mein Exotik-Urlaub</span>
+              </div>
+              <p class="intro-text">
+                Wenn ich Fernweh habe, koche ich dieses Curry. Es ist mein
+                liebstes Wohlfühlessen, weil es so herrlich cremig ist und durch
+                frischen Ingwer und Knoblauch eine unglaubliche Tiefe bekommt.
+                Ein Bissen davon, und der Stress des Tages ist vergessen.
+              </p>
+              <a href="recipes/chicken-curry.html"
+                >Chicken Curry
+                <img
+                  class="ingredient-icon"
+                  src="assets/icons/chicken.png"
+                  alt=""
+              /></a>
+            </div>
+
+            <div class="introductory-recipe">
+              <div class="intro-head">
+                <h2>Fleischbällchen</h2>
+                <span>Mein Stück Kindheit</span>
+              </div>
+              <p class="intro-text">
+                Diese Fleischbällchen in würziger Tomatensauce sind für mich
+                pures Gold. Ich liebe sie, weil sie so schön saftig sind und
+                mich jedes Mal an gemütliche Familienessen erinnern. Ein echter
+                Klassiker, der einfach immer geht und bei dem ich garantiert nie
+                nein sagen kann.
+              </p>
+              <a href="recipes/meatballs.html"
+                >Meatballs
+                <img
+                  class="ingredient-icon"
+                  src="assets/icons/noodles.png"
+                  alt=""
+              /></a>
+            </div>
+          </section>
+        </main>
+        <footer>
+          <div>
+            <span>Made by Henry 2026</span>
+          </div>
+      </div>
+    </div>
+  </body>
 </html>
