@@ -1,6 +1,6 @@
 export const recipes = {
-  german: [
-    {
+  german: {
+    'chilli-con-carne': {
       name: 'Chili con Carne',
       servings: 4,
       prepTimeMinutes: 15,
@@ -101,8 +101,7 @@ export const recipes = {
         'Vor dem Servieren Lorbeerblatt entfernen und abschmecken.',
       ],
     },
-
-    {
+    'chicken-curry': {
       name: 'Hähnchen Curry in cremiger Mandelsauce (Chicken Pasanda)',
       servings: 2,
       prepTimeMinutes: 10,
@@ -241,8 +240,7 @@ export const recipes = {
         'Mit Salz und Pfeffer abschmecken und mit Mandeln sowie Koriander garnieren.',
       ],
     },
-
-    {
+    meatballs: {
       name: 'Fleischbällchen in Tomatensoße',
       servings: 4,
       prepTimeMinutes: 15,
@@ -330,10 +328,10 @@ export const recipes = {
         'Mit Petersilie bestreuen und servieren.',
       ],
     },
-  ],
+  },
 
-  english: [
-    {
+  english: {
+    'chilli-con-carne': {
       name: 'Chili con Carne',
       servings: 4,
       prepTimeMinutes: 15,
@@ -434,8 +432,7 @@ export const recipes = {
         'Remove bay leaf and season to taste before serving.',
       ],
     },
-
-    {
+    'chicken-curry': {
       name: 'Chicken curry in creamy almond sauce (Chicken Pasanda)',
       servings: 2,
       prepTimeMinutes: 10,
@@ -574,8 +571,7 @@ export const recipes = {
         'Season with salt and pepper and garnish with almonds and coriander.',
       ],
     },
-
-    {
+    meatballs: {
       name: 'Meatballs in tomato sauce',
       servings: 4,
       prepTimeMinutes: 15,
@@ -663,5 +659,5 @@ export const recipes = {
         'Sprinkle with parsley and serve.',
       ],
     },
-  ],
+  },
 };
