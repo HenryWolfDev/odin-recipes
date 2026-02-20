@@ -356,14 +356,14 @@ export const recipes = {
 
   english: {
     'chilli-con-carne': {
-      name: 'Chili con Carne',
+      name: 'Chilli con Carne',
       servings: 4,
       prepTimeMinutes: 15,
       cookTimeMinutes: 90,
       category: 'Main course',
       link: 'https://www.vanbeekumspecerijen.nl/de/blogs/van-beekum-blog/welche-gewuerze-werden-in-chili-con-carne-verwende/',
       showcase: {
-        headline: 'Chili con Carne',
+        headline: 'Chilli con Carne',
         tagline: 'Quick and easy to make.',
         intro:
           'I always make chili con carne when I want to save time cooking and prepare enough for two days. It tastes just as good the next day. I usually serve it with rice. What do you like to have as a side dish?',

@@ -1,18 +1,20 @@
 'use strict';
 import { recipes } from './data/recipes-data.js';
-import { buttonIconPaths } from './data/button-icon-paths.js';
+import { previewButton } from './components/preview-button/button-component.js';
 
 const app = document.getElementById('app');
 
-const buttonText = ['Auf zum ', 'Rezept'];
+const renderPreview = language => {
+  // Preview Section
+  const prevSection = document.createElement('section');
+  prevSection.classList.add('preview-section');
 
-const renderPreview = () => {
-  Object.entries(recipes.german).forEach(recipe => {
-    // Container Preview
+  Object.entries(recipes[language]).forEach(recipe => {
+    // Container
     const container = document.createElement('div');
     container.classList.add('introductory-recipe');
 
-    // Header Preview
+    // Header
     const head = document.createElement('div');
     head.classList.add('intro-head');
     const title = document.createElement('h2');
@@ -20,42 +22,24 @@ const renderPreview = () => {
     const tag = document.createElement('span');
     tag.textContent = recipe[1].showcase.tagline;
 
-    // Intro Preview
+    // Intro Text
     const intro = document.createElement('p');
     intro.classList.add('intro-text');
     intro.textContent = recipe[1].showcase.intro;
 
-    // Recipe Button
-    const button = document.createElement('button');
-    button.classList.add('recipe-btn');
-
-    // Recipe Icon
-    const icon = document.createElement('img');
-    icon.classList.add('button-icon');
-    const iconKey = recipe[1].showcase.headline;
-    icon.src = buttonIconPaths.german[iconKey];
-
-    // Button Text
-    const textNodeStart = document.createElement('span');
-    textNodeStart.textContent = buttonText[0];
-    const textNodeEnd = document.createElement('span');
-    textNodeEnd.textContent = buttonText[1];
+    const prevButton = previewButton(recipe, language);
 
     head.appendChild(title);
     head.appendChild(tag);
 
-    button.appendChild(textNodeStart);
-    button.appendChild(icon);
-    button.appendChild(textNodeEnd);
-
     container.appendChild(head);
     container.appendChild(intro);
-    container.appendChild(button);
+    container.appendChild(prevButton);
 
-    app.appendChild(container);
+    prevSection.appendChild(container);
+
+    app.appendChild(prevSection);
   });
 };
 
-function getButtonIcon() {}
-
-renderPreview();
+renderPreview('german');
