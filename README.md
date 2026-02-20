@@ -2,13 +2,11 @@
 
 A basic recipe website
 
----
-
 ## Learnings:
 
 ---
 
-### Übergeben der eindeutigen Rezept ID im HTML zum rendern des Inhalts
+### Übergeben einer eindeutigen Rezept ID im HTML zum rendern des Inhalts
 
 Ziel:
 Jeder Button soll ein bestimmtes Rezept laden.

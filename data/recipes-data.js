@@ -6,6 +6,7 @@ export const recipes = {
       prepTimeMinutes: 15,
       cookTimeMinutes: 90,
       category: 'Hauptgericht',
+      link: 'https://www.vanbeekumspecerijen.nl/de/blogs/van-beekum-blog/welche-gewuerze-werden-in-chili-con-carne-verwende/',
       ingredients: [
         {
           item: 'Rinderhackfleisch',
@@ -107,6 +108,7 @@ export const recipes = {
       prepTimeMinutes: 10,
       cookTimeMinutes: 10,
       category: 'Hauptgericht',
+      link: 'https://www.vanbeekumspecerijen.nl/de/blogs/van-beekum-blog/welche-gewuerze-werden-in-chili-con-carne-verwende/',
       ingredients: [
         {
           item: 'Ghee oder neutrales Öl',
@@ -246,6 +248,7 @@ export const recipes = {
       prepTimeMinutes: 15,
       cookTimeMinutes: 20,
       category: 'Hauptgericht',
+      link: 'https://www.einfachkochen.de/rezepte/fleischbaellchen-original-mit-tomatensosse',
       ingredients: [
         {
           item: 'Rinderhackfleisch',
@@ -337,6 +340,7 @@ export const recipes = {
       prepTimeMinutes: 15,
       cookTimeMinutes: 90,
       category: 'Main course',
+      link: 'https://www.vanbeekumspecerijen.nl/de/blogs/van-beekum-blog/welche-gewuerze-werden-in-chili-con-carne-verwende/',
       ingredients: [
         {
           item: 'Ground beef',
@@ -438,6 +442,7 @@ export const recipes = {
       prepTimeMinutes: 10,
       cookTimeMinutes: 10,
       category: 'Main course',
+      link: 'https://www.vanbeekumspecerijen.nl/de/blogs/van-beekum-blog/welche-gewuerze-werden-in-chili-con-carne-verwende/',
       ingredients: [
         {
           item: 'Ghee or neutral oil',
@@ -577,6 +582,7 @@ export const recipes = {
       prepTimeMinutes: 15,
       cookTimeMinutes: 20,
       category: 'Main course',
+      link: 'https://www.einfachkochen.de/rezepte/fleischbaellchen-original-mit-tomatensosse',
       ingredients: [
         {
           item: 'Ground beef',
