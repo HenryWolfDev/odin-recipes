@@ -1,9 +1,9 @@
-import { prevButtonData } from './data/preview-button-data.js';
+import { prevButtonData } from './data.js';
 
-export const previewButton = (recipe, language) => {
+export const PreviewButton = (recipe, language) => {
   // Recipe Button
   const button = document.createElement('button');
-  button.classList.add('recipe-btn');
+  button.classList.add('prev-btn');
 
   // Recipe Icon
   const icon = document.createElement('img');

@@ -1,10 +1,10 @@
 'use strict';
-import { recipes } from './data/recipes-data.js';
-import { previewButton } from './components/preview-button/button-component.js';
+import { recipes } from '../data/recipes.js';
+import { PreviewButton } from '../components/Preview-Button/render.js';
 
 const app = document.getElementById('app');
 
-const renderPreview = language => {
+const Preview = language => {
   // Preview Section
   const prevSection = document.createElement('section');
   prevSection.classList.add('preview-section');
@@ -12,7 +12,7 @@ const renderPreview = language => {
   Object.entries(recipes[language]).forEach(recipe => {
     // Container
     const container = document.createElement('div');
-    container.classList.add('introductory-recipe');
+    container.classList.add('introductory');
 
     // Header
     const head = document.createElement('div');
@@ -27,7 +27,7 @@ const renderPreview = language => {
     intro.classList.add('intro-text');
     intro.textContent = recipe[1].showcase.intro;
 
-    const prevButton = previewButton(recipe, language);
+    const prevButton = PreviewButton(recipe, language);
 
     head.appendChild(title);
     head.appendChild(tag);
@@ -42,4 +42,4 @@ const renderPreview = language => {
   });
 };
 
-renderPreview('german');
+Preview('german');
