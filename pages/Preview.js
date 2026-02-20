@@ -2,9 +2,7 @@
 import { recipes } from '../data/recipes.js';
 import { PreviewButton } from '../components/Preview-Button/render.js';
 
-const app = document.getElementById('app');
-
-const Preview = language => {
+export const Preview = language => {
   // Preview Section
   const prevSection = document.createElement('section');
   prevSection.classList.add('preview-section');
@@ -37,9 +35,7 @@ const Preview = language => {
     container.appendChild(prevButton);
 
     prevSection.appendChild(container);
-
-    app.appendChild(prevSection);
   });
-};
 
-Preview('german');
+  return prevSection;
+};

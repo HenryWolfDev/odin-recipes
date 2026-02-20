@@ -1,4 +1,6 @@
+@import '/components/Header/style.css';
 @import '/components/Preview-Button/style.css';
+@import '/components/Footer/style.css';
 
 * {
   padding: 0;
@@ -76,43 +78,6 @@ body {
 }
 /* #endregion Global Styles */
 
-/* #region HEADER */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-  padding: 5.5rem 2rem;
-
-  .main-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    h1 {
-      font-size: 8rem;
-      text-transform: uppercase;
-      color: rgb(149, 201, 151);
-    }
-
-    .header-icon {
-      width: 14rem;
-      height: 14rem;
-      rotate: 25deg;
-    }
-  }
-
-  .language-btns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    margin-bottom: auto;
-    margin-left: 4rem;
-  }
-}
-/* #endregion HEADER */
-
 /* #region PREVIEW-SECTION */
 
 .preview-section {
@@ -155,18 +120,3 @@ header {
 }
 
 /* #endregion PREVIEW-SECTION */
-
-/* FOOTER */
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 4rem;
-  padding: 0 2rem;
-  font-size: 1.6rem;
-
-  .btn-style {
-    width: auto;
-  }
-}
