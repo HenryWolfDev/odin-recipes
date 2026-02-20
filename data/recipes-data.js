@@ -7,6 +7,13 @@ export const recipes = {
       cookTimeMinutes: 90,
       category: 'Hauptgericht',
       link: 'https://www.vanbeekumspecerijen.nl/de/blogs/van-beekum-blog/welche-gewuerze-werden-in-chili-con-carne-verwende/',
+      showcase: {
+        headline: 'Chilli con Carne',
+        tagline: 'Sehr schnell gemacht.',
+        intro:
+          'Chili con Carne mache ich immer, wenn ich mir Zeit fürs Kochen sparen will und auf Vorrat für zwei Tage koche. Es lässt sich auch am nächsten Tag noch super essen. Ansonsten gibt es immer Reis dazu. Was verwendest du als Beilage?',
+      },
+
       ingredients: [
         {
           item: 'Rinderhackfleisch',
@@ -109,6 +116,13 @@ export const recipes = {
       cookTimeMinutes: 10,
       category: 'Hauptgericht',
       link: 'https://www.vanbeekumspecerijen.nl/de/blogs/van-beekum-blog/welche-gewuerze-werden-in-chili-con-carne-verwende/',
+      showcase: {
+        headline: 'Hähnchen-Curry',
+        tagline: 'All Time Favorite.',
+        intro:
+          'Ich liebe dieses Gericht einfach. Der Geschmack des Ingwers mit den frischen Kräutern und den Gewürzen fühlt sich so gesund an, dass ich schon wieder ungesund viel davon esse. Absolute Empfehlung.',
+      },
+
       ingredients: [
         {
           item: 'Ghee oder neutrales Öl',
@@ -249,6 +263,13 @@ export const recipes = {
       cookTimeMinutes: 20,
       category: 'Hauptgericht',
       link: 'https://www.einfachkochen.de/rezepte/fleischbaellchen-original-mit-tomatensosse',
+      showcase: {
+        headline: 'Fleischbällchen',
+        tagline: 'Ein Stück Kindheit.',
+        intro:
+          'Jedes Mal, wenn mein Neffe und meine Nichte zu Besuch sind, kochen wir es und haben eine Menge Spaß dabei, die Fleischbällchen zu formen. Der Fetakäse ist genau richtig und macht das Gericht erst richtig rund.',
+      },
+
       ingredients: [
         {
           item: 'Rinderhackfleisch',
@@ -341,6 +362,13 @@ export const recipes = {
       cookTimeMinutes: 90,
       category: 'Main course',
       link: 'https://www.vanbeekumspecerijen.nl/de/blogs/van-beekum-blog/welche-gewuerze-werden-in-chili-con-carne-verwende/',
+      showcase: {
+        headline: 'Chili con Carne',
+        tagline: 'Quick and easy to make.',
+        intro:
+          'I always make chili con carne when I want to save time cooking and prepare enough for two days. It tastes just as good the next day. I usually serve it with rice. What do you like to have as a side dish?',
+      },
+
       ingredients: [
         {
           item: 'Ground beef',
@@ -443,6 +471,13 @@ export const recipes = {
       cookTimeMinutes: 10,
       category: 'Main course',
       link: 'https://www.vanbeekumspecerijen.nl/de/blogs/van-beekum-blog/welche-gewuerze-werden-in-chili-con-carne-verwende/',
+      showcase: {
+        headline: 'Chicken Curry',
+        tagline: 'All-time favorite.',
+        intro:
+          'I simply love this dish. The flavor of ginger combined with fresh herbs and spices feels so healthy that I end up eating way more of it than I probably should. Highly recommended.',
+      },
+
       ingredients: [
         {
           item: 'Ghee or neutral oil',
@@ -583,6 +618,13 @@ export const recipes = {
       cookTimeMinutes: 20,
       category: 'Main course',
       link: 'https://www.einfachkochen.de/rezepte/fleischbaellchen-original-mit-tomatensosse',
+      showcase: {
+        headline: 'Meatballs',
+        tagline: 'A taste of childhood.',
+        intro:
+          'Whenever my nephew and niece come to visit, we cook this dish together and have a lot of fun shaping the meatballs. The feta cheese adds just the right touch and truly completes the dish.',
+      },
+
       ingredients: [
         {
           item: 'Ground beef',
