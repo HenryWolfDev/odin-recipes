@@ -1,4 +1,4 @@
-export const Header = () => {
+export const Header = store => {
   const header = document.createElement('header');
   const hero = document.createElement('div');
   hero.classList.add('main-header');
@@ -16,10 +16,10 @@ export const Header = () => {
   languageSwitcher.classList.add('btn-style');
   languageSwitcher.textContent = 'EN';
 
-  let start = 'english';
-
   languageSwitcher.addEventListener('click', () => {
-    return (start = start === 'english' ? 'german' : 'english');
+    const current = store.getState();
+    const next = current === 'english' ? 'german' : 'english';
+    store.setState(next);
   });
 
   hero.appendChild(title);

@@ -8,7 +8,7 @@ export const Footer = () => {
 
   const attribution = document.createElement('div');
   const copyRight = document.createElement('small');
-  copyRight.textContent = `Made by Henry &copy;2026`;
+  copyRight.textContent = `Made by Henry &copy; 2026`;
 
   attribution.appendChild(copyRight);
 

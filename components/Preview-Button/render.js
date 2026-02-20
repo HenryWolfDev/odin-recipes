@@ -8,7 +8,7 @@ export const PreviewButton = (recipe, language) => {
   // Recipe Icon
   const icon = document.createElement('img');
   icon.classList.add('button-icon');
-  const iconKey = recipe[1].showcase.headline;
+  const iconKey = recipe.showcase.headline;
 
   icon.src = prevButtonData[language].paths[iconKey];
 
