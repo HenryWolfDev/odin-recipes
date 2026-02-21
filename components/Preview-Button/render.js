@@ -3,11 +3,11 @@ import { prevButtonData } from './data.js';
 export const PreviewButton = (recipe, language) => {
   // Recipe Button
   const button = document.createElement('button');
-  button.classList.add('prev-btn');
+  button.classList.add('action-btn');
 
   // Recipe Icon
   const icon = document.createElement('img');
-  icon.classList.add('button-icon');
+  icon.classList.add('icon');
   const iconKey = recipe.showcase.headline;
 
   icon.src = prevButtonData[language].paths[iconKey];

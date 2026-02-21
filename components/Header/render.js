@@ -13,7 +13,7 @@ export const Header = store => {
 
   const languageSwitcher = document.createElement('button');
   languageSwitcher.id = 'langSwitcher';
-  languageSwitcher.classList.add('global-btn-style');
+  languageSwitcher.classList.add('nav-btn');
 
   store.subscribe(state => {
     languageSwitcher.textContent = state.language === 'english' ? 'DE' : 'EN';

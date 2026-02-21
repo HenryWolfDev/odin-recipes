@@ -3,21 +3,29 @@ import { Header } from './components/Header/render.js';
 import { Footer } from './components/Footer/render.js';
 import { MainContent } from './pages/MainContent.js';
 
-const app = document.getElementById('app');
-
 const App = () => {
   const store = createStore({
     language: 'english',
     currentPage: 'preview',
     selectedRecipe: null,
   });
-  const header = Header(store);
-  const main = MainContent(store);
-  const footer = Footer();
 
-  app.appendChild(header);
-  app.appendChild(main);
-  app.appendChild(footer);
+  const render = () => {
+    const state = store.getState();
+    const app = document.getElementById('app');
+    app.innerHTML = '';
+
+    if (state.currentPage === 'preview') {
+      app.appendChild(Header(store));
+    }
+
+    app.appendChild(MainContent(store));
+    app.appendChild(Footer());
+  };
+
+  store.subscribe(render);
+
+  render();
 };
 
 App();
