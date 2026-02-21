@@ -20,31 +20,18 @@ export const Recipe = store => {
     const title = document.createElement('h2');
     title.textContent = recipe.name;
 
-    const pictureButton = document.createElement('button');
-    pictureButton.classList.add('action-btn');
-
-    const navBar = document.createElement('nav');
-    navBar.classList.add('navigation-bar');
-
     const ingredientsButton = document.createElement('button');
-    ingredientsButton.classList.add('action-btn');
+    ingredientsButton.classList.add('nav-btn');
     ingredientsButton.textContent = 'Ingredients';
+
     const ingredientIcon = document.createElement('img');
     ingredientIcon.src = 'assets/icons/zutaten.png';
     ingredientIcon.classList.add('icon');
 
     ingredientsButton.append(ingredientIcon);
-    navBar.append(ingredientsButton);
-
-    const pictureIcon = document.createElement('img');
-    pictureIcon.src = 'assets/icons/frame.png';
-    pictureIcon.classList.add('icon');
-
-    pictureButton.append(pictureIcon);
 
     section.appendChild(title);
-    section.appendChild(navBar);
-    section.appendChild(pictureButton);
+    section.appendChild(ingredientsButton);
   });
 
   return section;

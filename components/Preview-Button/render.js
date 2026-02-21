@@ -3,7 +3,7 @@ import { prevButtonData } from './data.js';
 export const PreviewButton = (recipe, language) => {
   // Recipe Button
   const button = document.createElement('button');
-  button.classList.add('action-btn');
+  button.classList.add('btn', 'btn-green');
 
   // Recipe Icon
   const icon = document.createElement('img');
