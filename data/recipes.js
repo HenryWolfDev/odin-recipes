@@ -110,7 +110,7 @@ export const recipes = {
       ],
     },
     'chicken-curry': {
-      name: 'Hähnchen Curry in cremiger Mandelsauce (Chicken Pasanda)',
+      name: 'Hähnchen Curry in cremiger Mandelsauce',
       servings: 2,
       prepTimeMinutes: 10,
       cookTimeMinutes: 10,
@@ -465,7 +465,7 @@ export const recipes = {
       ],
     },
     'chicken-curry': {
-      name: 'Chicken curry in creamy almond sauce (Chicken Pasanda)',
+      name: 'Chicken curry in creamy almond sauce',
       servings: 2,
       prepTimeMinutes: 10,
       cookTimeMinutes: 10,

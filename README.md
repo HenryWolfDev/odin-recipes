@@ -50,3 +50,15 @@ export const recipes = {
   }
 };
 ```
+
+---
+
+Icons from Freepik at flaticon:
+
+```html
+<a
+  href="https://www.flaticon.com/de/kostenlose-icons/rahmen"
+  title="rahmen Icons"
+  >Rahmen Icons erstellt von Freepik - Flaticon</a
+>
+```

@@ -10,7 +10,7 @@ export const Preview = store => {
     const { language } = state;
     section.replaceChildren();
 
-    Object.values(recipes[language]).forEach(recipeObj => {
+    Object.entries(recipes[language]).forEach(([recipeID, recipeObj]) => {
       const container = document.createElement('div');
       container.classList.add('introductory');
 
@@ -34,7 +34,7 @@ export const Preview = store => {
         store.setState({
           ...currentState,
           currentPage: 'recipe',
-          selectedRecipe: recipeObj,
+          selectedRecipe: recipeID,
         });
       });
 
