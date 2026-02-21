@@ -61,4 +61,10 @@ Icons from Freepik at flaticon:
   title="rahmen Icons"
   >Rahmen Icons erstellt von Freepik - Flaticon</a
 >
+
+<a
+  href="https://www.flaticon.com/de/kostenlose-icons/krauter"
+  title="kräuter- Icons"
+  >Kräuter- Icons erstellt von Smashicons - Flaticon</a
+>
 ```

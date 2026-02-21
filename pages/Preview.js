@@ -12,7 +12,7 @@ export const Preview = store => {
 
     Object.entries(recipes[language]).forEach(([recipeID, recipeObj]) => {
       const container = document.createElement('div');
-      container.classList.add('introductory');
+      container.classList.add('introduction');
 
       const head = document.createElement('div');
       head.classList.add('intro-head');

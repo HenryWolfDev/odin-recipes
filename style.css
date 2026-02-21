@@ -1,5 +1,6 @@
 @import '/components/Header/style.css';
 @import '/components/Footer/style.css';
+@import '/components/ingredientsList/style.css';
 
 :root {
   /* COLORS */
@@ -73,6 +74,7 @@ body {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+  color: var(--primary-color);
 }
 
 .container {
@@ -104,7 +106,7 @@ body {
 
 /* #endregion Global Styles */
 
-/* BUTTONS */
+/* #region BUTTONS */
 
 .btn {
   display: flex;
@@ -135,6 +137,7 @@ body {
   border-left: 0.1rem solid #407543;
   border-bottom: 0.2rem solid #376639;
 }
+/* #endregion BUTTONS */
 
 /* ICONS */
 .icon {
@@ -142,7 +145,7 @@ body {
   height: 3.5rem;
 }
 
-/* #region PREVIEW-SECTION */
+/* SECTIONS */
 
 .preview-section {
   height: 100%;
@@ -152,25 +155,23 @@ body {
   padding-top: 5.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
-}
 
-.introductory {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-  max-width: 40rem;
-  width: 100%;
-  height: 60rem;
-  letter-spacing: 2px;
+  .introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 40rem;
+    width: 100%;
+    height: 60rem;
+    letter-spacing: 2px;
 
-  .intro-head {
-    padding-bottom: 5rem;
+    .intro-head {
+      padding-bottom: 5rem;
 
-    span {
-      color: var(--tagline-color);
+      span {
+        color: var(--tagline-color);
+      }
     }
   }
 }
-
-/* #endregion PREVIEW-SECTION */

@@ -1,47 +1,47 @@
 export const ingredientsTypes = {
   german: {
-    Rind: 'minced-meat.png',
-    Hähnchen: 'chicken.png',
+    Rind: 'assets/icons/minced-meat.png',
+    Hähnchen: 'assets/icons/chicken.png',
 
-    Zwiebel: 'onions.png',
-    Knoblauch: 'garlic.png',
-    Kidneybohnen: 'beans.png',
-    Tomaten: 'tomatoes.png',
-    Ingwer: 'ginger.png',
+    Zwiebel: 'assets/icons/onions.png',
+    Knoblauch: 'assets/icons/garlic.png',
+    Kidneybohnen: 'assets/icons/beans.png',
+    Tomaten: 'assets/icons/tomatoes.png',
+    Ingwer: 'assets/icons/ginger.png',
 
-    Joghurt: 'creme.png',
-    Sahne: 'creme.png',
-    Ei: 'egg.png',
+    Joghurt: 'assets/icons/creme.png',
+    Sahne: 'assets/icons/creme.png',
+    Ei: 'assets/icons/egg.png',
 
-    Samen: 'seeds.png',
+    Samen: 'assets/icons/seeds.png',
 
-    Gewürze: 'spices.png',
-    Kräuter: 'herbs.png',
+    Gewürze: 'assets/icons/spices.png',
+    Kräuter: 'assets/icons/herbs.png',
 
-    Öl: 'oil.png',
-    Mehl: 'flour.png',
+    Öl: 'assets/icons/oil.png',
+    Mehl: 'assets/icons/flour.png',
   },
 
   english: {
-    Beef: 'minced-meat.png',
-    Chicken: 'chicken.png',
+    Beef: 'assets/icons/minced-meat.png',
+    Chicken: 'assets/icons/chicken.png',
 
-    Onion: 'onions.png',
-    Garlic: 'garlic.png',
-    KidneyBeans: 'beans.png',
-    Tomatoes: 'tomatoes.png',
-    Ginger: 'ginger.png',
+    Onion: 'assets/icons/onions.png',
+    Garlic: 'assets/icons/garlic.png',
+    KidneyBeans: 'assets/icons/beans.png',
+    Tomatoes: 'assets/icons/tomatoes.png',
+    Ginger: 'assets/icons/ginger.png',
 
-    Yogurt: 'creme.png',
-    Cream: 'creme.png',
-    Egg: 'egg.png',
+    Yogurt: 'assets/icons/creme.png',
+    Cream: 'assets/icons/creme.png',
+    Egg: 'assets/icons/egg.png',
 
-    Seeds: 'seeds.png',
+    Seeds: 'assets/icons/seeds.png',
 
-    Spices: 'spices.png',
-    Herbs: 'herbs.png',
+    Spices: 'assets/icons/spices.png',
+    Herbs: 'assets/icons/herbs.png',
 
-    Oil: 'oil.png',
-    Flour: 'flour.png',
+    Oil: 'assets/icons/oil.png',
+    Flour: 'assets/icons/flour.png',
   },
 };
