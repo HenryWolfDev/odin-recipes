@@ -1,0 +1,17 @@
+.btn-style {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 8rem;
+  padding: 1rem;
+  border-radius: 2.5rem;
+  border-top: 0.1rem solid #afafaf;
+  border-left: 0.1rem solid #407543;
+  border-bottom: 0.2rem solid #376639;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #b5e7ab;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  cursor: pointer;
+}

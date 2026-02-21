@@ -4,7 +4,7 @@ export const Footer = () => {
   gitHub.href = 'https://github.com/HenryWolfDev/odin-recipes/tree/main';
   gitHub.target = '_blank';
   gitHub.classList.add('btn-style');
-  gitHub.textContent = 'GitHub Project Link';
+  gitHub.textContent = 'GitHub';
 
   const attribution = document.createElement('div');
   const copyRight = document.createElement('small');

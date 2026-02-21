@@ -14,11 +14,12 @@ export const Header = store => {
   const languageSwitcher = document.createElement('button');
   languageSwitcher.id = 'langSwitcher';
   languageSwitcher.classList.add('btn-style');
-  languageSwitcher.textContent = 'EN';
+  languageSwitcher.textContent = 'DE';
 
   languageSwitcher.addEventListener('click', () => {
     const current = store.getState();
     const next = current === 'english' ? 'german' : 'english';
+    languageSwitcher.textContent = getNextLanguage(next);
     store.setState(next);
   });
 
@@ -31,4 +32,8 @@ export const Header = store => {
   header.appendChild(preferences);
 
   return header;
+};
+
+const getNextLanguage = currentLanguage => {
+  return currentLanguage === 'english' ? 'DE' : 'EN';
 };

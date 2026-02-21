@@ -3,11 +3,11 @@ import { recipes } from '../data/recipes.js';
 import { PreviewButton } from '../components/Preview-Button/render.js';
 
 export const Preview = store => {
-  const prevSection = document.createElement('section');
-  prevSection.classList.add('preview-section');
+  const section = document.createElement('section');
+  section.classList.add('preview-section');
 
   store.subscribe(language => {
-    prevSection.replaceChildren();
+    section.replaceChildren();
 
     Object.values(recipes[language]).forEach(recipeObj => {
       const container = document.createElement('div');
@@ -28,11 +28,15 @@ export const Preview = store => {
 
       const prevButton = PreviewButton(recipeObj, language);
 
+      prevButton.addEventListener('click', () => {
+        console.log(recipeObj);
+      });
+
       head.append(title, tag);
       container.append(head, intro, prevButton);
-      prevSection.appendChild(container);
+      section.appendChild(container);
     });
   });
 
-  return prevSection;
+  return section;
 };
