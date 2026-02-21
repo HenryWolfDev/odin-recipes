@@ -14,13 +14,15 @@ export const Header = store => {
   const languageSwitcher = document.createElement('button');
   languageSwitcher.id = 'langSwitcher';
   languageSwitcher.classList.add('btn-style');
-  languageSwitcher.textContent = 'DE';
+
+  store.subscribe(state => {
+    languageSwitcher.textContent = state.language === 'english' ? 'DE' : 'EN';
+  });
 
   languageSwitcher.addEventListener('click', () => {
-    const current = store.getState();
-    const next = current === 'english' ? 'german' : 'english';
-    languageSwitcher.textContent = getNextLanguage(next);
-    store.setState(next);
+    const state = store.getState();
+    const nextLanguage = state.language === 'english' ? 'german' : 'english';
+    store.setState({ ...state, language: nextLanguage });
   });
 
   hero.appendChild(title);
@@ -32,8 +34,4 @@ export const Header = store => {
   header.appendChild(preferences);
 
   return header;
-};
-
-const getNextLanguage = currentLanguage => {
-  return currentLanguage === 'english' ? 'DE' : 'EN';
 };

@@ -6,10 +6,12 @@ export const Preview = store => {
   const section = document.createElement('section');
   section.classList.add('preview-section');
 
-  store.subscribe(language => {
+  store.subscribe(state => {
+    const { language } = state;
     section.replaceChildren();
 
     Object.values(recipes[language]).forEach(recipeObj => {
+      console.log(recipeObj);
       const container = document.createElement('div');
       container.classList.add('introductory');
 
@@ -29,7 +31,12 @@ export const Preview = store => {
       const prevButton = PreviewButton(recipeObj, language);
 
       prevButton.addEventListener('click', () => {
-        console.log(recipeObj);
+        const currentState = store.getState();
+        store.setState({
+          ...currentState,
+          currentPage: 'recipe',
+          selectedRecipe: recipeObj,
+        });
       });
 
       head.append(title, tag);
