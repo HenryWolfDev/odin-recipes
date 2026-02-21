@@ -11,7 +11,6 @@ export const Preview = store => {
     section.replaceChildren();
 
     Object.values(recipes[language]).forEach(recipeObj => {
-      console.log(recipeObj);
       const container = document.createElement('div');
       container.classList.add('introductory');
 

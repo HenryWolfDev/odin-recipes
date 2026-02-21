@@ -5,9 +5,4 @@ footer {
   align-items: center;
   gap: 4rem;
   padding: 0 2rem;
-  font-size: 1.6rem;
-
-  .btn-style {
-    width: auto;
-  }
 }

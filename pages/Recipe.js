@@ -8,13 +8,18 @@ export const Recipe = store => {
     section.replaceChildren();
 
     const recipe = state.selectedRecipe;
+    const { language } = state;
 
-    if (!recipe) {
-      section.innerHTML = `<p>Kein Rezept ausgewählt</p>`;
-      return;
-    }
+    console.log(recipe);
 
-    const title = document.createElement('h1');
+    // TODO: Später implementieren!
+
+    // if (!recipe) {
+    //   section.innerHTML = `<p>Kein Rezept ausgewählt</p>`;
+    //   return;
+    // }
+
+    const title = document.createElement('h2');
     title.textContent = recipe.showcase.headline;
 
     section.appendChild(title);

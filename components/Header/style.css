@@ -1,34 +1,20 @@
 header {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 4rem;
   padding: 5.5rem 2rem;
 
-  .main-header {
+  .title-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    h1 {
-      font-size: 8rem;
-      text-transform: uppercase;
-      color: rgb(149, 201, 151);
-    }
 
-    .header-icon {
+    .title-icon {
       width: 14rem;
       height: 14rem;
       rotate: 25deg;
     }
-  }
-
-  .language-btns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    margin-bottom: auto;
-    margin-left: 4rem;
   }
 }

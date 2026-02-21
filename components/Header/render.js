@@ -1,11 +1,11 @@
 export const Header = store => {
   const header = document.createElement('header');
   const hero = document.createElement('div');
-  hero.classList.add('main-header');
+  hero.classList.add('title-container');
   const title = document.createElement('h1');
   title.textContent = 'Odin Recipes';
   const icon = document.createElement('img');
-  icon.classList.add('header-icon');
+  icon.classList.add('title-icon');
   icon.src = 'assets/icons/cooking-2.png';
 
   const preferences = document.createElement('div');
@@ -13,7 +13,7 @@ export const Header = store => {
 
   const languageSwitcher = document.createElement('button');
   languageSwitcher.id = 'langSwitcher';
-  languageSwitcher.classList.add('btn-style');
+  languageSwitcher.classList.add('global-btn-style');
 
   store.subscribe(state => {
     languageSwitcher.textContent = state.language === 'english' ? 'DE' : 'EN';

@@ -2,6 +2,27 @@
 @import '/components/Preview-Button/style.css';
 @import '/components/Footer/style.css';
 
+:root {
+  /* COLORS */
+  --h1-color: rgb(149, 201, 151);
+  --h2-color: #f7f7f7;
+  --p-color: #e4e4e4;
+  --tagline-color: #b5e7ab;
+
+  --primary-color: #f7f7f7;
+  --secondary-color: #e4e4e4;
+  --dark-color: #070707;
+  --bg-color-button: lch(80.84% 56.41 142.43);
+
+  /* FONT-SIZES */
+  --fs-h1: 8rem;
+  --fs-h2: 4.4rem;
+  --fs-p: 2.2rem;
+  --fs-sp: 2rem;
+  --fs-sm: 1.6rem;
+  --fs-button: 2rem;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -12,11 +33,36 @@
   border: none;
 }
 
+/* #region Global Styles */
 html {
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  color: #f7f7f7;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  text-transform: uppercase;
+  color: var(--h1-color);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  color: var(--h2-color);
+}
+
+p {
+  font-size: var(--fs-p);
+  color: var(--p-color);
+}
+
+span {
+  font-size: var(--fs-sp);
+}
+
+small {
+  font-size: var(--fs-sm);
+  color: var(--secondary-color);
 }
 
 body {
@@ -36,7 +82,7 @@ body {
   margin: 0 auto;
 }
 
-/* #region Global Styles */
+/* #endregion Global Styles */
 
 .smoke-video {
   position: absolute;
@@ -59,7 +105,7 @@ body {
   z-index: 2;
 }
 
-.btn-style {
+.global-btn-style {
   display: block;
   margin-top: 0;
   margin-bottom: 0;
@@ -69,14 +115,13 @@ body {
   border-top: 0.1rem solid #afafaf;
   border-left: 0.1rem solid #407543;
   border-bottom: 0.2rem solid #376639;
-  font-size: 1.6rem;
+  font-size: var(--fs-button);
   font-weight: bold;
   color: #b5e7ab;
   background-color: rgba(255, 255, 255, 0.1);
 
   cursor: pointer;
 }
-/* #endregion Global Styles */
 
 /* #region PREVIEW-SECTION */
 
@@ -98,24 +143,14 @@ body {
   max-width: 40rem;
   width: 100%;
   height: 60rem;
-  font-size: 2.2rem;
   letter-spacing: 2px;
 
   .intro-head {
     padding-bottom: 5rem;
 
-    h2 {
-      font-size: 4.4rem;
-    }
-
     span {
-      font-size: 2rem;
-      color: #b5e7ab;
+      color: var(--tagline-color);
     }
-  }
-
-  .intro-text {
-    color: #e4e4e4;
   }
 }
 
