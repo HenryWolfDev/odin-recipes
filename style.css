@@ -153,8 +153,8 @@ body {
 }
 
 .recipe-image {
-  max-width: 20rem;
-  height: 15rem;
+  max-width: 40rem;
+  height: 35rem;
   border-radius: 2.5rem;
 }
 
@@ -197,9 +197,17 @@ body {
 
   .lists-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 8rem;
+
+    .ingredients-list-and-image {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 }

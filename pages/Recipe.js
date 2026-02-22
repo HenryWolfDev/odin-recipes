@@ -13,35 +13,44 @@ export const Recipe = store => {
     const recipe = recipes[language][selectedRecipe];
     section.replaceChildren();
 
+    // Recipe Title
     const title = document.createElement('h2');
     title.textContent = recipe.name;
+
+    // Lists-Container
+    const listsContainer = document.createElement('div');
+    listsContainer.classList.add('lists-container');
+
+    // ingredientslist and Image
+    const ingAndImageContainer = document.createElement('div');
+    ingAndImageContainer.classList.add('ingredients-list-and-image');
+
+    const ingredientsContainer = document.createElement('div');
+    const ingredientsList = IngredientsList(recipe, language);
+    const ingredientsButton = createIngredientsButton();
 
     const recipeImage = document.createElement('img');
     recipeImage.src = recipeImagePaths[selectedRecipe];
     recipeImage.classList.add('recipe-image');
 
-    const listsContainer = document.createElement('div');
-    listsContainer.classList.add('lists-container');
-
-    const ingredientsContainer = document.createElement('div');
-    const instructionsContainer = document.createElement('div');
-
-    const ingredientsList = IngredientsList(recipe, language);
-    const instructionsList = InstructionsList(recipe);
-
-    const ingredientsButton = createIngredientsButton();
-    const instructionsButton = createInstructionsButton();
-
     ingredientsContainer.append(ingredientsButton);
     ingredientsContainer.append(ingredientsList);
+
+    ingAndImageContainer.append(ingredientsContainer);
+    ingAndImageContainer.append(recipeImage);
+
+    // Instructionslist
+    const instructionsContainer = document.createElement('div');
+    const instructionsList = InstructionsList(recipe);
+    const instructionsButton = createInstructionsButton();
+
     instructionsContainer.append(instructionsButton);
     instructionsContainer.append(instructionsList);
 
-    listsContainer.append(ingredientsContainer);
+    listsContainer.append(ingAndImageContainer);
     listsContainer.append(instructionsContainer);
 
     section.appendChild(title);
-    section.appendChild(recipeImage);
     section.appendChild(listsContainer);
   });
 
