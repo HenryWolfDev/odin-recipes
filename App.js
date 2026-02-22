@@ -1,7 +1,7 @@
 import { createStore } from './state/store.js';
 import { Header } from './components/Header/render.js';
 import { Footer } from './components/Footer/render.js';
-import { MainContent } from './pages/MainContent.js';
+import { MainContent } from './pages/Content.js';
 
 const App = () => {
   const store = createStore({
