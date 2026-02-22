@@ -201,14 +201,14 @@ body {
     gap: 2rem;
   }
 
-  .lists-container {
+  .recipe-main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 8rem;
 
-    .ingredients-list-and-image {
+    .ingredients-and-image {
       width: 100%;
       display: flex;
       flex-direction: row;

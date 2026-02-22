@@ -8,24 +8,21 @@ export const Preview = store => {
 
   store.subscribe(state => {
     const { language } = state;
+
     section.replaceChildren();
 
     Object.entries(recipes[language]).forEach(([recipeID, recipeObj]) => {
-      const container = document.createElement('div');
-      container.classList.add('introduction');
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('introduction');
 
-      const head = document.createElement('div');
-      head.classList.add('intro-head');
-
-      const title = document.createElement('h2');
-      title.textContent = recipeObj.showcase.headline;
-
-      const tag = document.createElement('span');
-      tag.textContent = recipeObj.showcase.tagline;
-
-      const intro = document.createElement('p');
-      intro.classList.add('intro-text');
-      intro.textContent = recipeObj.showcase.intro;
+      wrapper.innerHTML = `
+        <div class="intro-head">
+          <h2 class="intro-header">${recipeObj.showcase.headline}</h2>
+          <span class="intro-tagline">${recipeObj.showcase.tagline}</span>
+        </div>
+        <p class="intro-text">${recipeObj.showcase.intro}</p>
+        <div class="recipe-btn-container"></div>
+      `;
 
       const prevButton = PreviewButton(recipeObj, language);
 
@@ -38,9 +35,9 @@ export const Preview = store => {
         });
       });
 
-      head.append(title, tag);
-      container.append(head, intro, prevButton);
-      section.appendChild(container);
+      wrapper.querySelector('.recipe-btn-container').replaceWith(prevButton);
+
+      section.appendChild(wrapper);
     });
   });
 

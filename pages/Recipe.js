@@ -9,94 +9,59 @@ export const Recipe = store => {
   const section = document.createElement('section');
   section.classList.add('recipe-section');
 
+  section.innerHTML = `
+    <div>
+      <h2 class="recipe-title"></h2>
+      <div class="language-container"></div>
+    </div>
+    <div class="recipe-main">
+      <div class="ingredients-and-image">
+        <div class="ingredients-container"</div>
+        <img src="" class="recipe-image">
+      </div>
+      <div class="instructions-container"></div>
+    </div>
+  `;
+
+  const elements = {
+    title: section.querySelector('.recipe-title'),
+    image: section.querySelector('.recipe-image'),
+    languageContainer: section.querySelector('.language-container'),
+    ingContainer: section.querySelector('.ingredients-container'),
+    insContainer: section.querySelector('.instructions-container'),
+  };
+
+  elements.languageContainer.append(LanguageButton(store));
+
   store.subscribe(state => {
     const { language, selectedRecipe } = state;
     console.log(state);
     const recipe = recipes[language][selectedRecipe];
-    section.replaceChildren();
 
-    // Recipe Hero
-    const heroContainer = document.createElement('div');
-    heroContainer.classList.add('recipe-hero');
+    elements.title.textContent = recipe.name;
+    elements.image.src = recipeImagePaths[selectedRecipe];
 
-    const title = document.createElement('h2');
-    title.textContent = recipe.name;
+    elements.ingContainer.replaceChildren(
+      createButton('Ingredients', 'assets/icons/vegetables.png'),
+      IngredientsList(recipe, language),
+    );
 
-    const langButton = LanguageButton(store);
-
-    heroContainer.append(title);
-    heroContainer.append(langButton);
-
-    // Lists-Container
-    const listsContainer = document.createElement('div');
-    listsContainer.classList.add('lists-container');
-
-    // ingredientslist and Image
-    const ingAndImageContainer = document.createElement('div');
-    ingAndImageContainer.classList.add('ingredients-list-and-image');
-
-    const ingredientsContainer = document.createElement('div');
-    const ingredientsList = IngredientsList(recipe, language);
-    const ingredientsButton = createIngredientsButton();
-
-    const recipeImage = document.createElement('img');
-    recipeImage.src = recipeImagePaths[selectedRecipe];
-    recipeImage.classList.add('recipe-image');
-
-    ingredientsContainer.append(ingredientsButton);
-    ingredientsContainer.append(ingredientsList);
-
-    ingAndImageContainer.append(ingredientsContainer);
-    ingAndImageContainer.append(recipeImage);
-
-    // Instructionslist
-    const instructionsContainer = document.createElement('div');
-    const instructionsList = InstructionsList(recipe);
-    const instructionsButton = createInstructionsButton();
-
-    instructionsContainer.append(instructionsButton);
-    instructionsContainer.append(instructionsList);
-
-    listsContainer.append(ingAndImageContainer);
-    listsContainer.append(instructionsContainer);
-
-    section.appendChild(heroContainer);
-    section.appendChild(listsContainer);
+    elements.insContainer.replaceChildren(
+      createButton('Instructions', 'assets/icons/prep.png'),
+      InstructionsList(recipe),
+    );
   });
-
   return section;
 };
 
-const createIngredientsButton = () => {
+const createButton = (text, iconPath) => {
   const button = document.createElement('button');
   button.classList.add('btn', 'btn-transparent');
 
-  const name = document.createElement('span');
-  name.textContent = 'Ingredients';
-
-  const icon = document.createElement('img');
-  icon.src = 'assets/icons/vegetables.png';
-  icon.classList.add('icon');
-
-  button.append(icon);
-  button.append(name);
-
-  return button;
-};
-
-const createInstructionsButton = () => {
-  const button = document.createElement('button');
-  button.classList.add('btn', 'btn-transparent');
-
-  const name = document.createElement('span');
-  name.textContent = 'Instructions';
-
-  const icon = document.createElement('img');
-  icon.src = 'assets/icons/prep.png';
-  icon.classList.add('icon');
-
-  button.append(icon);
-  button.append(name);
+  button.innerHTML = `
+    <img src="${iconPath}" class="icon" alt="">
+    <span>${text}</span>
+  `;
 
   return button;
 };
