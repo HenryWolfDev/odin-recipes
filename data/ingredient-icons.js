@@ -20,6 +20,8 @@ export const ingredientsTypes = {
 
     Öl: 'assets/icons/oil.png',
     Mehl: 'assets/icons/flour.png',
+
+    Gemüse: 'assets/icons/vegetables.png',
   },
 
   english: {
@@ -43,5 +45,7 @@ export const ingredientsTypes = {
 
     Oil: 'assets/icons/oil.png',
     Flour: 'assets/icons/flour.png',
+
+    Vegetables: 'assets/icons/vegetables.png',
   },
 };

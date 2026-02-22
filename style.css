@@ -136,6 +136,13 @@ body {
   border-radius: 2.5rem;
   border-left: 0.1rem solid #407543;
   border-bottom: 0.2rem solid #376639;
+
+  &:hover {
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top: 0.1rem solid var(--secondary-color);
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.1);
+  }
 }
 /* #endregion BUTTONS */
 
@@ -190,7 +197,7 @@ body {
 
   .lists-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 8rem;

@@ -18,6 +18,7 @@ export const IngredientsList = (recipe, language) => {
     amount.textContent = ing.amount;
 
     const unit = document.createElement('span');
+    unit.classList.add('unit');
     unit.textContent = ing.unit;
 
     ingredient.append(icon);

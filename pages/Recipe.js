@@ -56,7 +56,7 @@ const createIngredientsButton = () => {
   name.textContent = 'Ingredients';
 
   const icon = document.createElement('img');
-  icon.src = 'assets/icons/zutaten.png';
+  icon.src = 'assets/icons/vegetables.png';
   icon.classList.add('icon');
 
   button.append(icon);
