@@ -1,6 +1,6 @@
 'use strict';
 import { recipes } from '../data/recipes.js';
-import { PreviewButton } from '../components/Preview-Button/render.js';
+import { RecipeButton } from '../components/Recipe-Button/render.js';
 
 export const Preview = store => {
   const section = document.createElement('section');
@@ -24,7 +24,7 @@ export const Preview = store => {
         <div class="recipe-btn-container"></div>
       `;
 
-      const prevButton = PreviewButton(recipeObj, language);
+      const prevButton = RecipeButton(recipeObj, language);
 
       prevButton.addEventListener('click', () => {
         const currentState = store.getState();
