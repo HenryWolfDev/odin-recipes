@@ -2,37 +2,37 @@ import { ingredientsTypes } from '../../data/ingredient-icons.js';
 
 export const IngredientsList = (recipe, language) => {
   const container = document.createElement('ul');
+
   recipe.ingredients.forEach(ing => {
     const ingredient = document.createElement('li');
     ingredient.classList.add('ingredient');
 
-    const icon = document.createElement('img');
-    icon.src = ingredientsTypes[language][ing.type];
-    icon.classList.add('icon');
-
-    const name = document.createElement('span');
-    name.textContent = ing.item;
-
     const amount = document.createElement('span');
-    amount.classList.add('amount');
-    amount.textContent = ing.amount;
+    amount.textContent = `${ing.amount}`;
+    amount.classList.add('ing-amount');
 
     const unit = document.createElement('span');
-    unit.classList.add('unit');
-    unit.textContent = ing.unit;
+    unit.textContent = `${ing.unit}`;
+    unit.classList.add('ing-unit');
 
-    ingredient.append(icon);
+    ingredient.innerHTML = `
+      <div class="image-container">
+        <img class="icon" src="${ingredientsTypes[language][ing.type]}">
+      </div>
+      <div>
+        <span class="ing-name">${ing.item}</span>
+        <div class="amount-container">
+        <span class="ing-amount">${ing.amount || ''}</span>
+        <span class="ing-unit">${ing.unit || ''}</span>
+        </div>
+      </div>
+    `;
 
-    if (ing.unit) {
-      ingredient.append(amount);
-    }
-    if (ing.unit) {
-      ingredient.append(unit);
-    }
-
-    ingredient.append(name);
-    container.appendChild(ingredient);
+    container.append(ingredient);
   });
 
   return container;
 };
+
+//  <span class="ing-amount">${ing.amount || ''}</span>
+//          <span class="ing-unit">${ing.unit || ''}</span>

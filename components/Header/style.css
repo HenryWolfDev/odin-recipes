@@ -5,13 +5,13 @@ header {
   gap: 4rem;
   padding: 5.5rem 2rem;
 
-  .title-container {
+  .hero-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
 
-    .title-icon {
+    .hero-icon {
       width: 14rem;
       height: 14rem;
       rotate: 25deg;

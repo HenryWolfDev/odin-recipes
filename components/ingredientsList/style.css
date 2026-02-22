@@ -1,12 +1,11 @@
 .ingredient {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 1rem;
 
-  .amount,
-  .unit {
-    font-weight: bold;
+  .ing-amount,
+  .ing-unit {
     color: var(--tagline-color);
   }
 }

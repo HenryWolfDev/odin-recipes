@@ -16,7 +16,7 @@ export const Recipe = store => {
     </div>
     <div class="recipe-main">
       <div class="ingredients-and-image">
-        <div class="ingredients-container"</div>
+        <div class="ingredients-container"></div>
         <img src="" class="recipe-image">
       </div>
       <div class="instructions-container"></div>
@@ -35,7 +35,6 @@ export const Recipe = store => {
 
   store.subscribe(state => {
     const { language, selectedRecipe } = state;
-    console.log(state);
     const recipe = recipes[language][selectedRecipe];
 
     elements.title.textContent = recipe.name;
