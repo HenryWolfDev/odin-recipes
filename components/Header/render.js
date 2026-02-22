@@ -1,3 +1,5 @@
+import { LanguageButton } from '../Language-Button/render.js';
+
 export const Header = store => {
   const header = document.createElement('header');
   const hero = document.createElement('div');
@@ -11,19 +13,7 @@ export const Header = store => {
   const preferences = document.createElement('div');
   preferences.classList.add('preferences');
 
-  const languageSwitcher = document.createElement('button');
-  languageSwitcher.id = 'langSwitcher';
-  languageSwitcher.classList.add('btn', 'btn-transparent');
-
-  store.subscribe(state => {
-    languageSwitcher.textContent = state.language === 'english' ? 'DE' : 'EN';
-  });
-
-  languageSwitcher.addEventListener('click', () => {
-    const state = store.getState();
-    const nextLanguage = state.language === 'english' ? 'german' : 'english';
-    store.setState({ ...state, language: nextLanguage });
-  });
+  const languageSwitcher = LanguageButton(store);
 
   hero.appendChild(title);
   hero.appendChild(icon);

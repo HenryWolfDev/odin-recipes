@@ -3,6 +3,7 @@ import { recipes } from '../data/recipes.js';
 import { IngredientsList } from '../components/ingredientsList/render.js';
 import { recipeImagePaths } from '../data/recipes-images.js';
 import { InstructionsList } from '../components/instructionsList/render.js';
+import { LanguageButton } from '../components/Language-Button/render.js';
 
 export const Recipe = store => {
   const section = document.createElement('section');
@@ -10,12 +11,21 @@ export const Recipe = store => {
 
   store.subscribe(state => {
     const { language, selectedRecipe } = state;
+    console.log(state);
     const recipe = recipes[language][selectedRecipe];
     section.replaceChildren();
 
-    // Recipe Title
+    // Recipe Hero
+    const heroContainer = document.createElement('div');
+    heroContainer.classList.add('recipe-hero');
+
     const title = document.createElement('h2');
     title.textContent = recipe.name;
+
+    const langButton = LanguageButton(store);
+
+    heroContainer.append(title);
+    heroContainer.append(langButton);
 
     // Lists-Container
     const listsContainer = document.createElement('div');
@@ -50,7 +60,7 @@ export const Recipe = store => {
     listsContainer.append(ingAndImageContainer);
     listsContainer.append(instructionsContainer);
 
-    section.appendChild(title);
+    section.appendChild(heroContainer);
     section.appendChild(listsContainer);
   });
 
